@@ -15,7 +15,7 @@ const Home = () => {
       setMessage(error);
     } else {
       setMessage(
-        `You are ${dateObj.years} years ${dateObj.months} months and ${Math.floor(dateObj.days)} days old`,
+        `You are ${dateObj.years === 0 ? '' : `${dateObj.years} years`} ${dateObj.months === 0 ? '': `${dateObj.months} month(s)`} ${Math.floor(dateObj.days) === 0 ? '' : `${Math.floor(dateObj.days)} days`} old`,
       );
     }
   };
